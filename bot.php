@@ -20,7 +20,7 @@ if(strpos($message, "!dni") === 0){
     $bin = substr($message, 5);
     $curl = curl_init();
     curl_setopt_array($curl, [
-    CURLOPT_URL => "https://ws-sisef.minseg.gob.ar:18443/renaper/getPersonaNoneSexo/?dni=".$dni,
+    CURLOPT_URL => "api".$dni,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",

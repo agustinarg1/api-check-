@@ -12,15 +12,15 @@
     $start_msg = $_ENV['START_MSG']; 
 
 if($message == "/start"){
-    send_message($chat_id,$message_id, "***Hi $firstname \nUse !bin xxxxxx to Check BIN \n$start_msg***");
+    send_message($chat_id,$message_id, "***Hola $firstname \nPara usar pone así  !dni xxxxxx el número \n$start_msg***");
 }
 
 //Bin Lookup
-if(strpos($message, "!bin") === 0){
+if(strpos($message, "!dni") === 0){
     $bin = substr($message, 5);
     $curl = curl_init();
     curl_setopt_array($curl, [
-    CURLOPT_URL => "https://binsu-api.vercel.app/api/".$bin,
+    CURLOPT_URL => "https://binsu-api.vercel.app/api/".$dni,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
@@ -50,7 +50,7 @@ if(strpos($message, "!bin") === 0){
 
     if ($result1 == true) {
     send_message($chat_id,$message_id, "***✅ Valid BIN
-Bin: $bin
+DNI: $dni
 Brand: $brand
 Level: $level
 Bank: $bank

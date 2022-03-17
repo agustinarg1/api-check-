@@ -29,9 +29,11 @@ if(strpos($message, "!dni") === 0){
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
-    "Connection: Keep-Alive",
-    "Accept-Encoding: gzip",
-    "User-Agent: okhttp/2.7.5"
+    "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "accept-language: en-GB,en-US;q=0.9,en;q=0.8,hi;q=0.7",
+    "sec-fetch-dest: document",
+    "sec-fetch-site: none",
+    "user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
    ],
    ]);
 

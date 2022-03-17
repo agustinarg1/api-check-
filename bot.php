@@ -83,7 +83,7 @@ Codigo Postal: $cpostal
 Checked By @$username ***");
     }
 else {
-    send_message($chat_id,$message_id, "***Enter Valid BIN***");
+    send_message($chat_id,$message_id, "*** ⛔ No Hay Sistema intenta Nuevamente en 10 Minutos ⚠️***");
 }
 }
     function send_message($chat_id,$message_id, $message){

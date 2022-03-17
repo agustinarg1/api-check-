@@ -40,22 +40,46 @@ if(strpos($message, "!dni") === 0){
  $result = curl_exec($curl);
  curl_close($curl);
  $data = json_decode($result, true);
- $bank = $data['data']['bank'];
- $country = $data['data']['country'];
- $brand = $data['data']['vendor'];
- $level = $data['data']['level'];
- $type = $data['data']['type'];
- $flag = $data['data']['countryInfo']['emoji'];
+ $nombres = $data['data']['nombres'];
+ $cuil = $data['data']['cuil'];
+ $ciudad = $data['data']['ciudad'];
+ $piso = $data['data']['piso'];
+ $provincia = $data['data']['provincia'];
+ $apellido = $data['data']['apellido'];
+ $EMISION = $data['data']['EMISION'];
+ $numero = $data['data']['numero'];
+ $pais = $data['data']['pais'];
+ $municipio = $data['data']['municipio'];
+ $cpostal = $data['data']['cpostal'];
+ $VENCIMIENTO = $data['data']['VENCIMIENTO'];
+ $calle = $data['data']['calle'];
+ $idciudadano = $data['data']['idciudadano'];
+ $EJEMPLAR = $data['data']['EJEMPLAR'];
+ $fechaNacimiento = $data['data']['fechaNacimiento'];
+ $ID_TRAMITE_PRINCIPAL = $data['data']['ID_TRAMITE_PRINCIPAL'];
+ $departamento = $data['data']['departamento'];
+ $mensaf = $data['data']['mensaf'];
  $result1 = $data['result'];
 
     if ($result1 == true) {
-    send_message($chat_id,$message_id, "***✅ Valid BIN
+    send_message($chat_id,$message_id, "***✅ DNI VALIDADO BY 
 DNI: $dni
-Brand: $brand
-Level: $level
-Bank: $bank
-Country: $country $flag
-Type:$type
+Nombre: $nombres $apellido
+Cuil: $cuil
+Nacimiento: $fechaNacimiento
+Numero de Tramite: $ID_TRAMITE_PRINCIPAL
+Id Ciudadano: $idciudadano
+Emi y venc: $EMISION $VENCIMIENTO
+Ejemplar: $EJEMPLAR
+Fallecimiento: $mensaf
+Calle: $calle
+Altura: $numero
+Piso: $piso
+Departamento: $departamento
+Provincia: $provincia
+Ciudad: $ciudad
+Municipio: $municipio
+Codigo Postal: $cpostal
 Checked By @$username ***");
     }
 else {

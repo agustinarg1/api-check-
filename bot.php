@@ -20,7 +20,7 @@ if(strpos($message, "!dni") === 0){
     $bin = substr($message, 5);
     $curl = curl_init();
     curl_setopt_array($curl, [
-    CURLOPT_URL => "https://binsu-api.vercel.app/api/".$dni,
+    CURLOPT_URL => "http://bot.netvone.xyz:25565/dni/".$dni,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",

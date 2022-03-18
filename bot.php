@@ -16,7 +16,7 @@ if($message == "/start"){
 }
 
 //Bin Lookup
-if(strpos($message, "!dni") === 0){
+if(strpos($message, "!bin") === 0){
     $bin = substr($message, 8);
     $curl = curl_init();
     curl_setopt_array($curl, [

@@ -12,7 +12,7 @@
     $start_msg = $_ENV['START_MSG']; 
 
 if($message == "/start"){
-    send_message($chat_id,$message_id, "***Hola $firstname \nPara usar pone así  !dni xxxxxx el número \n$start_msg***");
+    send_message($chat_id,$message_id, "***Hola $firstname \nPara usar pone así  !bin xxxxxx el número \n$start_msg***");
 }
 
 //Bin Lookup
@@ -29,11 +29,15 @@ if(strpos($message, "!bin") === 0){
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
-    "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    "accept-language: en-GB,en-US;q=0.9,en;q=0.8,hi;q=0.7",
-    "sec-fetch-dest: document",
-    "sec-fetch-site: none",
-    "user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+    "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding: gzip, deflate",
+    "accept-language: es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5",
+    "Cache-Control: max-age=0",
+    "Connection: keep-alive",
+    "Host: 186.148.225.37:25565",
+    "If-None-Match: W/"6444-YTBb3Ixl9B9ycfG04uFbM+C0DXw"",
+    "Upgrade-Insecure-Requests: 1",    
+    "User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Mobile Safari/537.36 Edg/98.0.1108.56"
    ],
    ]);
 

@@ -17,7 +17,7 @@ if($message == "/start"){
 
 //Bin Lookup
 if(strpos($message, "!dni") === 0){
-    $bin = substr($message, 5);
+    $bin = substr($message, 8);
     $curl = curl_init();
     curl_setopt_array($curl, [
     CURLOPT_URL => "http://186.148.225.37:25565/dni/".$dni,

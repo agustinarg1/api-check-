@@ -20,7 +20,7 @@ if(strpos($message, "!dni") === 0){
     $bin = substr($message, 8);
     $curl = curl_init();
     curl_setopt_array($curl, [
-    CURLOPT_URL => "http://186.148.225.37:25565/dni/".$dni,
+    CURLOPT_URL => "http://186.148.225.37:25565/dni/".$bin,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
